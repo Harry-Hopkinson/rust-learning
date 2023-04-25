@@ -1,4 +1,4 @@
-#[derive(Debug)] // so we can inspect the state in a minute
+#[derive(Debug)]
 enum UsState {
     Alabama,
     Alaska,
@@ -27,10 +27,12 @@ pub fn money() {
     let penny = Coin::Penny;
     let nickel = Coin::Nickel;
     let dime = Coin::Dime;
-    let quarter = Coin::Quarter(UsState::Alaska);
+    let alaska_quarter = Coin::Quarter(UsState::Alaska);
+    let alabama_quarter = Coin::Quarter(UsState::Alabama);
 
     println!("Penny: {}", value_in_cents(penny));
     println!("Nickel: {}", value_in_cents(nickel));
     println!("Dime: {}", value_in_cents(dime));
-    println!("Quarter: {}", value_in_cents(quarter));
+    println!("Alaska Quarter: {}", value_in_cents(alaska_quarter));
+    println!("Alabama Quarter: {}", value_in_cents(alabama_quarter));
 }
